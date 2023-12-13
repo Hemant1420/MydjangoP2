@@ -1,0 +1,2 @@
+This is python django project for Automated News Articles. 
+This project uses News API to fetch News from trusted sources and then uses GPT-4 to create original content for the article to be posted and shown to the user.
