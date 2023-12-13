@@ -1,9 +1,9 @@
-#GET https://newsapi.org/v2/everything?q=bitcoin&apiKey=4fccf9a9200744178deeb56b77c2cc2f
+
 from newsapi import NewsApiClient
 from openai import OpenAI
-client = OpenAI(api_key="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")
+client = OpenAI(api_key="")
 
-newsapi = NewsApiClient(api_key='4fccf9a9200744178deeb56b77c2cc2f')
+newsapi = NewsApiClient(api_key='')
 
 
 def getContent(query):
@@ -11,7 +11,7 @@ def getContent(query):
 
     try:
       print("Getting Headlines for " + query)
-      newsapi = NewsApiClient(api_key='4fccf9a9200744178deeb56b77c2cc2f')
+      newsapi = NewsApiClient(api_key='')
       top_headlines = newsapi.get_top_headlines(query)
       imgUrl2 = top_headlines['articles'][0]['urlToImage']
       titlezz = top_headlines['articles'][0]['title']
@@ -37,7 +37,7 @@ def getContent(query):
     except Exception as e:
       print(f"An exception occurred: {str(e)}")
       try:
-        newsapi = NewsApiClient(api_key='4fccf9a9200744178deeb56b77c2cc2f')
+        newsapi = NewsApiClient(api_key='')
         print("No Headlines found, using everything now")
         top_headlines = newsapi.get_everything(query)
         imgUrl2 = top_headlines['articles'][0]['urlToImage']
